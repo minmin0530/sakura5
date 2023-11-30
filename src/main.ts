@@ -36,7 +36,11 @@ class Div {
     this.div.style.position = "absolute";
     this.div.style.right = this.right + "px";
     this.div.style.top = this.top + "px";
-    this.div.style.fontSize = (Math.random() * 20) + "px";
+    let sakuraSize = (Math.random() * 10000 / window.innerWidth);
+    if (window.innerWidth > window.innerHeight) {
+      sakuraSize = (Math.random() * 15000 / window.innerHeight);
+    }
+    this.div.style.fontSize = sakuraSize + "px";
     footerImage.appendChild(this.div);
   }
 
